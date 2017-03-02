@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <h1> State Report Generator </h1>
+    <h2>Instructions:</h2>
+    <p>Simply upload the appropriate files in the right section. Click submit and the state report will generate. Make sure you double check the generated report. Due to differences in how the data is inputed the program might not be able to read one section (i.e Name) and will output 'REGEX ERROR'. If you get a 500 internal server error please email crosspeyton@gmail.com and the issue should be fixed within 24 hours</p>
+    <h2>Upload Monthly Vendors</h2>
+    <p>This will be a txt file usually in the format May2017.txt</p>
+    <form action = "http://104.236.130.113/uploader" method = "POST"
+	  enctype = "multipart/form-data">
+      <input type = "file" name = "file" />
+      <h2>Upload List of Vendors</h2>
+      <p>This will be an excel file usually in the format 2017_1099.xlsx</p>
+    <form action = "http://104.236.130.113/process" method = "POST" enctype = "multipart/form-data">
+      <input type = "file" name = "vendors" />
+      <br> <hr>
+      <input type = "submit"/>
+    </form>
+  </body>
+  </html>
